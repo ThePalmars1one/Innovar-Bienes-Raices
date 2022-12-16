@@ -9,7 +9,6 @@ import { SliderService } from 'src/app/services/slider.service';
 export class SliderComponent {
 
   constructor(private sliderService: SliderService) {
-    this.sliderService.loadScript();
   }
 
 }
