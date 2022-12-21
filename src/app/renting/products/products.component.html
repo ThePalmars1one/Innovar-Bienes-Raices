@@ -1,1 +1,27 @@
-<p>products works!</p>
+<section>
+    <div *ngFor="let p of products" class="rent_card">
+        <div>
+            <img src="{{p.img}}" alt="Img House/Aparment" class="rent_img">
+        </div>
+        <div class="rent_info">
+            <div>
+                <img src="assets/img/icono_innovar.svg" alt="Icon Innovar" class="rent_icon">
+                <h2>{{p.location}}</h2>
+                <h2>$ {{p.price}}</h2>
+            </div>
+        </div>
+        <div class="rent_option">
+            <div>
+                <div class="card_icons">
+                    <img src="assets/img/bath.svg" alt="Bath Icon">
+                    <h2>{{p.bath}}</h2>
+                </div>
+                <div class="card_icons">
+                    <img src="assets/img/bed.svg" alt="Bath Icon">
+                    <h2>{{p.room}}</h2>
+                </div>
+            </div>
+            <button type="button" (click)="addToCart(p)" class="rent_button">Agendar</button>
+        </div>
+    </div>
+</section>

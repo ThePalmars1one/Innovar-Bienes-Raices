@@ -1,1 +1,37 @@
-<p>shopping-car works!</p>
+<section  *ngIf="items.length > 0">
+    <div *ngFor="let list of items" class="rent_card" >
+        <div>
+            <img src="{{list.img}}" alt="Img House/Aparment" class="rent_img">
+        </div>
+        <div class="rent_info">
+            <div>
+                <img src="assets/img/icono_innovar.svg" alt="Icon Innovar" class="rent_icon">
+                <h2>{{list.location}}</h2>
+                <h2>$ {{list.price}}</h2>
+            </div>
+        </div>
+        <div class="rent_option">
+            <div>
+                <div class="card_icons">
+                    <img src="assets/img/bath.svg" alt="Bath Icon">
+                    <h2>{{list.bath}}</h2>
+                </div>
+                <div class="card_icons">
+                    <img src="assets/img/bed.svg" alt="Bath Icon">
+                    <h2>{{list.room}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<ng-container *ngIf="items.length ==0">
+    <div class="back_container">
+        <img src="assets/img/left-arrow.svg" alt="Back Button">
+    </div>
+    <div>
+        <h2 class="empty_cart"> Todavía no has <br>
+        seleccionado ningún <br>
+        producto</h2>
+    </div>
+</ng-container>
