@@ -1,5 +1,8 @@
 <div class="shopping_container">
-    <button routerLink="/Cart" ><img src="assets/img/shopping.svg" alt="Shopping Cart Icon" class="shopping_cart"></button>
-    <h2>{{itemCount()}}</h2>
+    <div>
+        <button routerLink="/Cart"><img src="assets/img/shopping.svg" alt="Shopping Cart Icon" class="shopping_cart"></button>
+        <h2 class="count">{{itemCount()}}</h2>
+    </div>
+
 </div>
 <app-products></app-products>
