@@ -13,6 +13,7 @@ import { SellComponent } from './sales/sell/sell.component';
 import { ProductsSellComponent } from './sales/products-sell/products-sell.component';
 import { ShoppingCarComponent } from './public/shopping-car/shopping-car.component';
 import { SliderComponent } from './home/slider/slider.component';
+import { SwiperModule } from "swiper/angular";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SliderComponent } from './home/slider/slider.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

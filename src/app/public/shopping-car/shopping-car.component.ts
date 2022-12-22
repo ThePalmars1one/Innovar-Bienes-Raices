@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
-import { iProducts } from 'src/app/products';
+import { iProducts, products } from 'src/app/products';
 
 @Component({
   selector: 'app-shopping-car',
@@ -15,10 +15,7 @@ export class ShoppingCarComponent implements OnInit{
 
   ngOnInit() {
     
-  }
-
-  remove(){
-    return this.items = [];
+  
   }
 
 
