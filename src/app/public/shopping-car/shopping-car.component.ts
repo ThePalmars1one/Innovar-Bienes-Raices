@@ -15,8 +15,10 @@ export class ShoppingCarComponent implements OnInit{
 
   ngOnInit() {
     
-  
   }
 
+  deleteItem(list: any){
+    this._productsService.deleteItem(list);
+  }
 
 }

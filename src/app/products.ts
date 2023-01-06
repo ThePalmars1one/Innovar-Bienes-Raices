@@ -109,5 +109,15 @@ export const products = [
         type: "house",
         quantity: 1,
         id: "10"
+      },
+      {
+        img: "assets/products_img/products_rent/apto5.jpg",
+        room: "3",
+        bath: "4",
+        location: "Cuenca, Ecuador",
+        price: 1375,
+        type: "apartment",
+        quantity: 1,
+        id: "11"
       },   
 ]

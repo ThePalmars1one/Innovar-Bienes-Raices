@@ -11,6 +11,7 @@ export class ProductsComponent implements OnInit {
 
   product: iProducts | undefined;
   products: any = products;
+  
 
   constructor (private _productsService: ProductsService){}
 
@@ -21,7 +22,4 @@ export class ProductsComponent implements OnInit {
     this._productsService.addToCart(products);
     console.log(this.products);
   }
-
-
-
 }

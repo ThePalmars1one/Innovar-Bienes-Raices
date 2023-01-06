@@ -1,4 +1,7 @@
-<section  *ngIf="items.length > 0">
+<section *ngIf="items.length > 0">
+    <div class="back_container">
+        <button routerLink="/Rent"><img src="assets/img/left-arrow.svg" alt="Back Button"></button>
+    </div>
     <div *ngFor="let list of items" class="rent_card" >
         <div>
             <img src="{{list.img}}" alt="Img House/Aparment" class="rent_img">
@@ -21,13 +24,14 @@
                     <h2>{{list.room}}</h2>
                 </div>
             </div>
+            <button type="button" (click)="deleteItem(list)" class="rent_button" id="button_add">Remover</button>
         </div>
     </div>
 </section>
 
 <ng-container *ngIf="items.length ==0">
     <div class="back_container">
-        <img src="assets/img/left-arrow.svg" alt="Back Button">
+        <button routerLink="/Rent"><img src="assets/img/left-arrow.svg" alt="Back Button"></button>
     </div>
     <div>
         <h2 class="empty_cart"> Todavía no has <br>

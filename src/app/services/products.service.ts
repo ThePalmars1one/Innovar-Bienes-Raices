@@ -27,4 +27,15 @@ export class ProductsService {
     return this.items.length;
   }
 
+  deleteItem(product: iProducts){
+    this.items.splice(0,1);
+    return this.items;
+  }
+
+  
+
+
+
+
+
 }
