@@ -1,32 +1,36 @@
 <section *ngIf="items.length > 0">
-    <div class="back_container">
-        <button routerLink="/Rent"><img src="assets/img/left-arrow.svg" alt="Back Button"></button>
-    </div>
-    <div *ngFor="let list of items" class="rent_card" >
-        <div>
-            <img src="{{list.img}}" alt="Img House/Aparment" class="rent_img">
+    <div class="cart_container">
+        <div class="back_container">
+            <button routerLink="/Rent"><img src="assets/img/left-arrow.svg" alt="Back Button"></button>
         </div>
-        <div class="rent_info">
+        <div *ngFor="let list of items" class="rent_card" >
             <div>
-                <img src="assets/img/icono_innovar.svg" alt="Icon Innovar" class="rent_icon">
-                <h2>{{list.location}}</h2>
-                <h2>$ {{list.price}}</h2>
+                <img src="{{list.img}}" alt="Img House/Aparment" class="rent_img">
             </div>
-        </div>
-        <div class="rent_option">
-            <div>
-                <div class="card_icons">
-                    <img src="assets/img/bath.svg" alt="Bath Icon">
-                    <h2>{{list.bath}}</h2>
-                </div>
-                <div class="card_icons">
-                    <img src="assets/img/bed.svg" alt="Bath Icon">
-                    <h2>{{list.room}}</h2>
+            <div class="rent_info">
+                <div>
+                    <img src="assets/img/icono_innovar.svg" alt="Icon Innovar" class="rent_icon">
+                    <h2>{{list.location}}</h2>
+                    <h2>$ {{list.price}}</h2>
                 </div>
             </div>
-            <button type="button" (click)="deleteItem(list)" class="rent_button" id="button_add">Remover</button>
+            <div class="rent_option">
+                <div>
+                    <div class="card_icons">
+                        <img src="assets/img/bath.svg" alt="Bath Icon">
+                        <h2>{{list.bath}}</h2>
+                    </div>
+                    <div class="card_icons">
+                        <img src="assets/img/bed.svg" alt="Bath Icon">
+                        <h2>{{list.room}}</h2>
+                    </div>
+                </div>
+                <button type="button" (click)="deleteItem(list)" class="rent_button" id="button_add">Remover</button>
+            </div>
         </div>
+
     </div>
+    
     <div class="whatsapp_button">
         <button type="button">
             <img src="assets/img/whatsapp.svg" alt="Whatsapp Icon">

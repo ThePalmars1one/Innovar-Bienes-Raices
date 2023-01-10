@@ -11,7 +11,16 @@ export class ProductsService {
   constructor() { }
 
   addToCart(product: iProducts) {
-    this.items.push(product);
+    let index = -1;
+    index = this.items.findIndex(
+        p => p.id === product.id
+      );
+      if (index != -1) {
+        this.items[index].quantity += 1;
+      } else if (index === -1) {
+        this.items.push(product);
+      }
+    
   }
 
   getItems() {
@@ -28,7 +37,8 @@ export class ProductsService {
   }
 
   deleteItem(product: iProducts){
-    this.items.splice(0,1);
+    let indexC = this.items.findIndex(p => p.id === product.id);
+    this.items.splice(indexC,1);
     return this.items;
   }
 

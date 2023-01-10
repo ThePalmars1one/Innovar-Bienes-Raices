@@ -1,6 +1,7 @@
 <div class="shopping_button">
-    <button  class="house_button">Casas</button>
-    <button class="apartment_button">Apartamentos</button>
+    <button class="house_button" (click)="filterC('all')">Todos</button>
+    <button class="house_button" (click)="filterC('house')">Casas</button>
+    <button class="apartment_button" (click)="filterC('apartment')">Apartamentos</button>
 </div>
 <section>
     <div *ngFor="let p of products" class="rent_card">
