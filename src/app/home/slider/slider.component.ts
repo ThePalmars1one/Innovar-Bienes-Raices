@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { SliderService } from 'src/app/services/slider.service';
-import SwiperCore, { Pagination } from "swiper";
-SwiperCore.use([Pagination]);
+import SwiperCore, { Pagination, Autoplay } from "swiper";
+SwiperCore.use([Pagination, Autoplay]);
 
 @Component({
   selector: 'app-slider',

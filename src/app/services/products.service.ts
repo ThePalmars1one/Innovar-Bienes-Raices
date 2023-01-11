@@ -20,6 +20,7 @@ export class ProductsService {
       );
       if (index != -1) {
         this.items[index].quantity += 1;
+        alert("No puede agregar inmuebles repetidos")
       } else if (index === -1) {
         this.items.push(product);
       }
