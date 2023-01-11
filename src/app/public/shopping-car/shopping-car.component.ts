@@ -23,7 +23,7 @@ export class ShoppingCarComponent implements OnInit{
   }
 
   send(){
-    var message= "Estoy interesado en los siguientes productos: "
+    var message= "Estoy interesado en los siguientes inmuebles: "
     this.items.forEach(function(product){
       message += " N° ID: " + product.id + " Ubicado en " + product.location + " y con un canon de " + product.price + "$." + "\n"
     })
