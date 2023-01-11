@@ -10,6 +10,7 @@ import { iProducts, products } from 'src/app/products';
 export class ShoppingCarComponent implements OnInit{
 
   items = this._productsService.getItems();
+  itemWS: any = products;
 
   constructor(private _productsService: ProductsService) {}
 
@@ -19,6 +20,14 @@ export class ShoppingCarComponent implements OnInit{
 
   deleteItem(list: any){
     this._productsService.deleteItem(list);
+  }
+
+  send(){
+    var message= "Estoy interesado en los siguientes productos: "
+    this.items.forEach(function(product){
+      message += " N° ID: " + product.id + " Ubicado en " + product.location + " y con un canon de " + product.price + "$." + "\n"
+    })
+    this._productsService.sendMessage(message)
   }
 
 }

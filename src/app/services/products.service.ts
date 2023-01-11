@@ -7,6 +7,8 @@ import { iProducts } from '../products';
 export class ProductsService {
  
   items: iProducts[] = [];
+  url: string = "https://api.whatsapp.com/send?phone=+573205728762&text="
+  sl: string= "&0A";
 
   constructor() { }
 
@@ -27,11 +29,6 @@ export class ProductsService {
     return this.items;
   }
 
-  clearCart() {
-    this.items = [];
-    return this.items;
-  }
-
   itemsCount(){
     return this.items.length;
   }
@@ -42,10 +39,11 @@ export class ProductsService {
     return this.items;
   }
 
-  
-
-
-
+  sendMessage(product: string) {
+    let info = product;
+    var url = 'https://api.whatsapp.com/send?phone=573205728762&text=' + encodeURIComponent(info);
+    window.open(url);
+  }
 
 
 }
