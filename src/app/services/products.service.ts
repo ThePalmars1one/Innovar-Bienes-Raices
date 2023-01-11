@@ -9,6 +9,7 @@ export class ProductsService {
   items: iProducts[] = [];
   url: string = "https://api.whatsapp.com/send?phone=+573205728762&text="
   sl: string= "&0A";
+  full: any [] = []
 
   constructor() { }
 
@@ -37,6 +38,12 @@ export class ProductsService {
     let indexC = this.items.findIndex(p => p.id === product.id);
     this.items.splice(indexC,1);
     return this.items;
+  }
+
+  clearCart(totalItems: number){
+    let indexC = this.items.findIndex(p => p.id === p.id);
+    this.items.splice(indexC, totalItems)
+    return this.items
   }
 
   sendMessage(product: string) {
